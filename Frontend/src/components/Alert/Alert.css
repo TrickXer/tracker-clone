@@ -1,0 +1,51 @@
+.alert-box {
+    right: 0;
+    top: 75px;
+    z-index: 2;
+    padding: 10px;
+    min-width: 0px;
+    text-align: left;
+    line-height: 1.5;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 8px;
+    cursor: context-menu;
+    transform: translateX(0);
+    background-color: #303030;
+    transition: all 150ms ease-in-out;
+}
+
+.alert-box.pop {
+    visibility: visible;
+    min-width: 250px;
+    transform: translateX(-10px);
+}
+
+.alert-box.pop .pop-title {
+    display: flex;
+    align-items: center;
+}
+
+.alert-box.alert-box.pop .tick-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.alert-box .tick-icon {
+    width: 0px;
+    height: 0px;
+}
+
+.alert-box .title {
+    color: white;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.alert-box .content {
+    color: #ccc;
+    font-size: 12px;
+    margin-left: 30px;
+    text-transform: capitalize;
+}

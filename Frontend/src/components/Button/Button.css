@@ -1,0 +1,51 @@
+.styled-button {
+    border: 0;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
+
+.styled-highlight {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.styled-highlight:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-overlay {
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 500ms linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        width: 400px;
+        height: 400px;
+    }
+}

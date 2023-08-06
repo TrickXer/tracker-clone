@@ -1,0 +1,197 @@
+.home-container {
+    z-index: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 64px);
+}
+
+.bg-image {
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    height: calc(100vh - 64px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("./images/valorant-wallpaper-3840x2160.jpg");
+}
+
+.bg-darkness {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.search-player {
+    z-index: 1;
+    width: 416px;
+    height: 48px;
+    display: flex;
+    border-width: 0;
+    padding: 2px 8px;
+    position: relative;
+    border-radius: 25px;
+    align-items: center;
+    top: calc(50vh - 64px);
+    left: calc(50% - 208px);
+    justify-content: center;
+    background-color: white;
+    animation: jiggle 150ms ease-in-out;
+    transition: transform 300ms ease-in-out;
+}
+
+.search-player.show {
+    transform: translateY(calc(-50vh + 100px));
+}
+
+@keyframes jiggle {
+    0% {
+        transform: translateY(-25px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.search-bar {
+    width: 100%;
+    height: 19px;
+    outline: none;
+    border-width: 0;
+    margin-left: 8px;
+    padding: 4px 0px 5px;
+    vertical-align: middle;
+}
+
+.search-bar::placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.37);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.search-button {
+    padding: 12px;
+    display: grid;
+    border-width: 0;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    place-content: center;
+    vertical-align: middle;
+    background-position: center;
+    transition: background 150ms;
+    background-color: transparent;
+}
+
+.search-button svg {
+    fill: rgba(0, 0, 0, 0.54);
+}
+
+.search-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button-overlay {
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    animation: ripple 250ms linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.show-players {
+    top: 74px;
+    opacity: 0;
+    z-index: -1;
+    padding: 0px 10px;
+    visibility: hidden;
+    overflow-y: scroll;
+    position: relative;
+    transform: translateY(50%);
+    height: calc(100vh - 190px);
+    background-color: transparent;
+    transition: all 300ms ease-in-out;
+}
+
+.search-player.show ~ .show-players {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.player-div {
+    width: 100%;
+    height: 96px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    padding: 25px 50px;
+    margin-bottom: 25px;
+    align-items: center;
+    border-radius: 15px;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+    transition: all 150ms ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.player-div:first-child {
+    margin-top: 25px;
+}
+
+.player-div:last-child {
+    margin-bottom: 0px;
+}
+
+.player-div:hover {
+    transform: scale(1.005);
+}
+
+.show-players::-webkit-scrollbar {
+    display: none;
+}
+
+.player-display-avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: top center;
+}
+
+.player-div p {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.player-div * {
+    margin-right: 3vw;
+}

@@ -1,0 +1,87 @@
+.nonet-container {
+    width: 100%;
+    /* z-index: 1; */
+    height: 100vh;
+    display: grid;
+    position: relative;
+    place-content: center;
+    background-size: cover;
+    background-position: top center;
+    background-image: url('./images//Riot-Vanguard.jpg');
+}
+
+.nonet-container-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.54);
+}
+
+.nonet-found-box-bg {
+    top: 0;
+    left: 0;
+    /* z-index: 1; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    filter: grayscale(100%);
+    background-position: top center;
+    background-image: url('./images//1203294.jpg');
+}
+
+.nonet-box-op {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.84);
+}
+
+.nonet-box-content {
+    /* z-index: 1; */
+    position: relative;
+}
+
+.nonet-found-box {
+    width: 350px;
+    padding: 40px;
+    position: relative;
+}
+
+.nonet-title {
+    color: white;
+    display: grid;
+    font-size: 32px;
+    place-content: center;
+    text-transform: uppercase;
+}
+
+.nonet-content {
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.nonet-title-divider {
+    border: 0;
+    height: 2px;
+    background-color: #FF4655;
+}
+
+.nonet-button {
+    display: grid;
+    margin-top: 100px;
+    place-content: center;
+}
+
+.nonet-retry {
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px 30px;
+    background-color: #FF4655;
+    text-transform: capitalize;
+}

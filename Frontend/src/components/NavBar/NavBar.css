@@ -1,0 +1,151 @@
+.navbar {
+    z-index: 1;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: #303030;
+    justify-content: space-between;
+    box-shadow: 0px 30px 35px rgba(0, 0, 0, 0.54);
+}
+
+.navbar-tabs {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.tab-indicator {
+    left: 0;
+    width: 0;
+    height: 4px;
+    bottom: -10px;
+    transition: 0.5s;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #FF4655;
+}
+
+.tab-box {
+    list-style: none;
+}
+
+.navbar-tab {
+    font-weight: 400;
+    color: darkgrey;
+    text-align: center;
+    padding: 10px 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.highlight {
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+}
+
+.navbar-tab:hover, .highlight:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-tab.active {
+    font-weight: 500;
+    color: white;
+}
+
+.nav-button {
+    display: flex;
+    color: white;
+    border-width: 0;
+    font-weight: 500;
+    position: relative;
+    margin-right: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    letter-spacing: 3px;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #FF4655;
+}
+
+.nav-button svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-right: 8px;
+    fill: white;
+}
+
+.display-avatar-profile {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-direction: column;
+    justify-content: center;
+    object-position: top center;
+}
+
+.display-avatar {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    background-position: top center;
+}
+
+.avatar-accordion {
+    opacity: 0;
+    width: 150px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    visibility: hidden;
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+    text-transform: capitalize;
+    transition: all 150ms ease;
+    transform: translate(-80%, 70%);
+}
+
+.display-avatar.active .avatar-accordion {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-80%, 80%);
+}
+
+.list-item-divider {
+    border: 0;
+    width: 90%;
+    height: 1px;
+    background-color: grey;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+}
+
+.list-item svg {
+    width: 28px;
+    height: 28px;
+    fill: grey;
+    margin-left: 15px;
+    margin-right: 15px;
+}
